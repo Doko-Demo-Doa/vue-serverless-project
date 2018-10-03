@@ -1,14 +1,35 @@
 {
-    "providers": {
-        "awscloudformation": {
-            "AuthRoleName": "vueserverlessproject-20181004011604-authRole",
-            "UnauthRoleArn": "arn:aws:iam::533453231098:role/vueserverlessproject-20181004011604-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::533453231098:role/vueserverlessproject-20181004011604-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "vueserverlessproject-20181004011604-deployment",
-            "UnauthRoleName": "vueserverlessproject-20181004011604-unauthRole",
-            "StackName": "vueserverlessproject-20181004011604",
-            "StackId": "arn:aws:cloudformation:us-east-1:533453231098:stack/vueserverlessproject-20181004011604/656c9130-c738-11e8-a6d8-50d5cd1ea8d2"
-        }
-    }
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "vueserverlessproject-20181004011604-authRole",
+			"UnauthRoleArn": "arn:aws:iam::533453231098:role/vueserverlessproject-20181004011604-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::533453231098:role/vueserverlessproject-20181004011604-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "vueserverlessproject-20181004011604-deployment",
+			"UnauthRoleName": "vueserverlessproject-20181004011604-unauthRole",
+			"StackName": "vueserverlessproject-20181004011604",
+			"StackId": "arn:aws:cloudformation:us-east-1:533453231098:stack/vueserverlessproject-20181004011604/656c9130-c738-11e8-a6d8-50d5cd1ea8d2"
+		}
+	},
+	"auth": {
+		"cognitoaaf7a856": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/vueserverlessproject-20181004011604-deployment/amplify-cfn-templates/auth/cognitoaaf7a856-cloudformation-template.yml",
+				"logicalId": "authcognitoaaf7a856"
+			},
+			"lastPushTimeStamp": "2018-10-03T18:26:43.683Z",
+			"output": {
+				"AppClientSecret": "16jhpaa5jt43saeif560thkaamnkohlud46nmubrufvu6k5vq6i5",
+				"UserPoolId": "us-east-1_ldVcysDdr",
+				"AppClientIDWeb": "2ff202fvj2nhl4ua2aiq5ei83j",
+				"AppClientID": "5sc033frd76rkrkh314jes1vgj",
+				"IdentityPoolId": "us-east-1:e64a0728-ee30-4f89-9d8d-8ea87345266d",
+				"IdentityPoolName": "cognitoaaf7a856_identitypool_aaf7a856",
+				"UserPoolName": "cognitoaaf7a856_userpool_aaf7a856"
+			},
+			"lastPushDirHash": "zf1HH9LMl7TOM0bu8d4rFg8NmlQ="
+		}
+	}
 }
