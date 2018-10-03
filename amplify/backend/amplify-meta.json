@@ -47,5 +47,14 @@
 			},
 			"lastPushDirHash": "T1xoalfXjy2njV++lKkkRaoYhQg="
 		}
+	},
+	"api": {
+		"walkthroughcoffeeshopapi": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"securityType": "API_KEY"
+			}
+		}
 	}
 }

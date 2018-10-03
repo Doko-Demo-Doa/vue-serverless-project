@@ -5,7 +5,12 @@
     </div>
     <div ng-if="signedIn">
       <amplify-sign-out></amplify-sign-out>
-      <h1>Hello World</h1>
+      <div class="container">
+        <amplify-photo-picker
+          v-bind:photoPickerConfig="photoPickerConfig">
+        </amplify-photo-picker>
+        <amplify-s3-album path="images/"></amplify-s3-album>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +18,10 @@
 <script>
 import { AmplifyEventBus } from 'aws-amplify-vue'
 import { Auth } from 'aws-amplify'
+
+const photoPickerConfig = {
+  path: 'images/'
+}
 
 export default {
   name: 'app',
@@ -34,6 +43,7 @@ export default {
   },
   data() {
     return {
+      photoPickerConfig,
       signedIn: false
     }
   }
@@ -41,6 +51,9 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -48,5 +61,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  padding: 40px;
+}
+.signout {
+  background-color: #ededed;
+  margin: 0;
+  padding: 11px 0px 1px;
 }
 </style>
