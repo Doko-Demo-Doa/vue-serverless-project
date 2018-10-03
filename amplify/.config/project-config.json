@@ -1,0 +1,20 @@
+{
+    "projectName": "vueserverlessproject",
+    "projectPath": "/Users/Doko/Projects/NodeJS/vue-serverless-project",
+    "defaultEditor": "code",
+    "frontendHandler": {
+        "javascript": "/Users/Doko/.nvs/node/10.11.0/x64/lib/node_modules/@aws-amplify/cli/node_modules/amplify-frontend-javascript"
+    },
+    "javascript": {
+        "framework": "vue",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist",
+            "BuildCommand": "npm run-script build",
+            "StartCommand": "npm run-script serve"
+        }
+    },
+    "providers": {
+        "awscloudformation": "/Users/Doko/.nvs/node/10.11.0/x64/lib/node_modules/@aws-amplify/cli/node_modules/amplify-provider-awscloudformation"
+    }
+}

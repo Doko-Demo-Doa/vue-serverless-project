@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "vueserverlessproject-20181004011604-authRole",
+            "UnauthRoleArn": "arn:aws:iam::533453231098:role/vueserverlessproject-20181004011604-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::533453231098:role/vueserverlessproject-20181004011604-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "vueserverlessproject-20181004011604-deployment",
+            "UnauthRoleName": "vueserverlessproject-20181004011604-unauthRole",
+            "StackName": "vueserverlessproject-20181004011604",
+            "StackId": "arn:aws:cloudformation:us-east-1:533453231098:stack/vueserverlessproject-20181004011604/656c9130-c738-11e8-a6d8-50d5cd1ea8d2"
+        }
+    }
+}
