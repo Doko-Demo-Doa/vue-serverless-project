@@ -7,10 +7,11 @@ Amplify.configure(aws_exports);
 Vue.use(AmplifyPlugin, AmplifyModules)
 
 import Vue from 'vue'
-import App from './App.vue'
+// import App from './App.vue'
+import AppCoffeeShop from './App-CoffeeShop.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App)
+  render: h => h(AppCoffeeShop)
 }).$mount('#app')

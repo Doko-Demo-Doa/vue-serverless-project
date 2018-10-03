@@ -142,6 +142,19 @@
 					"unauthPermissions": ""
 				}
 			}
+		},
+		"apiwalkthroughcoffeeshopapi": {
+			"Type": "AWS::CloudFormation::Stack",
+			"Properties": {
+				"TemplateURL": "https://s3.amazonaws.com/vueserverlessproject-20181004011604-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"Parameters": {
+					"AppSyncApiName": "walkthroughcoffeeshopapi",
+					"schemaGraphql": "s3://vueserverlessproject-20181004011604-deployment/amplify-appsync-files/schema.graphql.1538593368496",
+					"ResolverBucket": "vueserverlessproject-20181004011604-deployment",
+					"ResolverRootKey": "amplify-appsync-files",
+					"DeploymentTimestamp": "1538593368496"
+				}
+			}
 		}
 	},
 	"Outputs": {

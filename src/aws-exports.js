@@ -7,7 +7,11 @@ const awsmobile =  {
     "aws_user_pools_id": "us-east-1_ldVcysDdr",
     "aws_user_pools_web_client_id": "2ff202fvj2nhl4ua2aiq5ei83j",
     "aws_user_files_s3_bucket": "doko-vue-serverless",
-    "aws_user_files_s3_bucket_region": "us-east-1"
+    "aws_user_files_s3_bucket_region": "us-east-1",
+    "aws_appsync_graphqlEndpoint": "https://pz7ona6yxnae7ieksvst7xajfi.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-1",
+    "aws_appsync_authenticationType": "API_KEY",
+    "aws_appsync_apiKey": "da2-eg6pumcrbbb4dd7wdwb4fzhmni"
 };
 
 

@@ -19,7 +19,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/vueserverlessproject-20181004011604-deployment/amplify-cfn-templates/auth/cognitoaaf7a856-cloudformation-template.yml",
 				"logicalId": "authcognitoaaf7a856"
 			},
-			"lastPushTimeStamp": "2018-10-03T18:52:58.864Z",
+			"lastPushTimeStamp": "2018-10-03T19:05:57.452Z",
 			"output": {
 				"AppClientSecret": "16jhpaa5jt43saeif560thkaamnkohlud46nmubrufvu6k5vq6i5",
 				"UserPoolId": "us-east-1_ldVcysDdr",
@@ -40,7 +40,7 @@
 				"s3TemplateURL": "https://s3.amazonaws.com/vueserverlessproject-20181004011604-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
 				"logicalId": "storagedoko"
 			},
-			"lastPushTimeStamp": "2018-10-03T18:52:58.867Z",
+			"lastPushTimeStamp": "2018-10-03T19:05:57.453Z",
 			"output": {
 				"BucketName": "doko-vue-serverless",
 				"Region": "us-east-1"
@@ -53,8 +53,17 @@
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
-				"securityType": "API_KEY"
-			}
+				"securityType": "API_KEY",
+				"GraphQLAPIIdOutput": "o7g6jtazcrddxeummyutympn4u",
+				"GraphQLAPIEndpointOutput": "https://pz7ona6yxnae7ieksvst7xajfi.appsync-api.us-east-1.amazonaws.com/graphql",
+				"GraphQLAPIKeyOutput": "da2-eg6pumcrbbb4dd7wdwb4fzhmni"
+			},
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/vueserverlessproject-20181004011604-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apiwalkthroughcoffeeshopapi"
+			},
+			"lastPushTimeStamp": "2018-10-03T19:05:57.457Z",
+			"lastPushDirHash": "AqfhUUmT5TD9MNpCP51v6qsqqX4="
 		}
 	}
 }

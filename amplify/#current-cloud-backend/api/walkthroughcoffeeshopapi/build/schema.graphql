@@ -1,0 +1,119 @@
+type CoffeeShop {
+  id: ID!
+  name: String!
+  description: String
+  location: String
+  rating: Int
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelCoffeeShopConnection {
+  items: [CoffeeShop]
+  nextToken: String
+}
+
+input ModelStringFilterInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+}
+
+input ModelIDFilterInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+}
+
+input ModelIntFilterInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  contains: Int
+  notContains: Int
+  between: [Int]
+}
+
+input ModelFloatFilterInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  contains: Float
+  notContains: Float
+  between: [Float]
+}
+
+input ModelBooleanFilterInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelCoffeeShopFilterInput {
+  id: ModelIDFilterInput
+  name: ModelStringFilterInput
+  description: ModelStringFilterInput
+  location: ModelStringFilterInput
+  rating: ModelIntFilterInput
+  and: [ModelCoffeeShopFilterInput]
+  or: [ModelCoffeeShopFilterInput]
+  not: ModelCoffeeShopFilterInput
+}
+
+type Query {
+  getCoffeeShop(id: ID!): CoffeeShop
+  listCoffeeShops(filter: ModelCoffeeShopFilterInput, limit: Int, nextToken: String): ModelCoffeeShopConnection
+}
+
+input CreateCoffeeShopInput {
+  name: String!
+  description: String
+  location: String
+  rating: Int
+}
+
+input UpdateCoffeeShopInput {
+  id: ID!
+  name: String
+  description: String
+  location: String
+  rating: Int
+}
+
+input DeleteCoffeeShopInput {
+  id: ID
+}
+
+type Mutation {
+  createCoffeeShop(input: CreateCoffeeShopInput!): CoffeeShop
+  updateCoffeeShop(input: UpdateCoffeeShopInput!): CoffeeShop
+  deleteCoffeeShop(input: DeleteCoffeeShopInput!): CoffeeShop
+}
+
+type Subscription {
+  onCreateCoffeeShop: CoffeeShop @aws_subscribe(mutations: ["createCoffeeShop"])
+  onUpdateCoffeeShop: CoffeeShop @aws_subscribe(mutations: ["updateCoffeeShop"])
+  onDeleteCoffeeShop: CoffeeShop @aws_subscribe(mutations: ["deleteCoffeeShop"])
+}
