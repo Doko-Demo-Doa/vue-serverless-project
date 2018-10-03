@@ -65,6 +65,33 @@ export default {
     } catch (e) {
       this.signedIn = false
     }
+    AmplifyEventBus.$on('authState', info => {
+      if (info === 'signedIn') {
+        this.signedIn = true
+      } else {
+        this.signedIn = false
+      }
+    });
+  },
+  methods: {
+    async createCoffeeShop() {
+      if (this.name === '' || this.description == '') {
+        return
+      }
+      const coffeeShop = { name: this.name, description: this.description }
+      const coffeeShops = [...this.coffeeShops, coffeeShop]
+      this.coffeeShops = coffeeShops
+
+      this.name = ''
+      this.description = ''
+
+      try {
+        await API.graphql(graphqlOperation(CreateCoffeeShop, coffeeShop))
+        console.log('Coffee Shop created!')
+      } catch (e) {
+        console.log('error adding item: ', e)
+      }
+    }
   }
 }
 </script>
