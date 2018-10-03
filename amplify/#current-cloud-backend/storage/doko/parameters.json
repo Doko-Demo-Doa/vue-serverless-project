@@ -1,0 +1,9 @@
+{
+    "bucketName": "doko-vue-serverless",
+    "authPolicyName": "s3_amplify_3c7270e5",
+    "unauthPolicyName": "s3_amplify_3c7270e5",
+    "authRoleName": "vueserverlessproject-20181004011604-authRole",
+    "unauthRoleName": "vueserverlessproject-20181004011604-unauthRole",
+    "authPermissions": "rw",
+    "unauthPermissions": ""
+}

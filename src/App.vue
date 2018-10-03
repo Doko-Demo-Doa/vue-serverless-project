@@ -1,17 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div ng-if="!signedIn">
+      <amplify-authenticator></amplify-authenticator>
+    </div>
+    <div ng-if="signedIn">
+      <amplify-sign-out></amplify-sign-out>
+      <h1>Hello World</h1>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { AmplifyEventBus } from 'aws-amplify-vue'
+import { Auth } from 'aws-amplify'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  async beforeCreate() {
+    try {
+      const user = await Auth.currentAuthenticatedUser()
+      this.signedIn = true
+    } catch (e) {
+      this.signedIn = false
+    }
+
+    AmplifyEventBus.$on('authState', info => {
+      if (info === 'signedIn') {
+        this.signedIn = true
+      } else {
+        this.signedIn = false
+      }
+    })
+  },
+  data() {
+    return {
+      signedIn: false
+    }
   }
 }
 </script>
